@@ -8,10 +8,16 @@ body {
     color: #4a4a4a;
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
+    line-height: 1.5;
+}
+
+nav {
+    padding-top: 10px;
 }
 
 main h2 {
     text-align: center;
+    padding: 75px 10px;
 }
 
 /***********************************
@@ -33,6 +39,10 @@ main h2 {
     align-self: center;
 }
 
+.header {
+    padding-top: 20px;
+}
+
 .nav {
     list-style: none;
 }
@@ -43,23 +53,19 @@ main h2 {
     font-weight: bold;
 }
 
-.header {
-    margin: 3em;
-}
-
 .banner {
+    padding-top: 10px;
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
-.profile-picture, 
-.banner-text {
-    padding: 5px;
-}
-
 .banner img {
     width: 60%;
+}
+
+.banner-text {
+    padding: 20px 5px 0 5px;
 }
 
 .portfolio img {
@@ -76,6 +82,10 @@ main h2 {
     width: 300px;
 }
 
+.box h3,
+.box p {
+    padding-top: 1em;
+}
 
 /***********************************
             Footer
@@ -89,19 +99,46 @@ main h2 {
 }
 
 .footer h2 {
-    margin: 2em;
+    padding-top: 3.5em;
 }
 
 .footer p {
-    margin-bottom: 1.75em;
+    padding-top: 1em;
+    padding-bottom: 2em;
+}
+
+.footer-email {
+    padding-bottom: 3em;
+}
+
+.footer-nav {
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding: 0.8em 0.25em 0.8em 0.25em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer-nav h4 {
+    padding: 10px;
 }
 
 /* MEDIA QUERIES */
 
+@media (min-width: 320px){ 
+    .footer-home,
+    .footer-portfolio,
+    .footer-contact {
+        display: none;
+    }
+}
+/* I used a media query to hide some text because according to the 320pixel mockup it only shows BACK TO TOP */
+
 @media (min-width: 768px){
-    .banner {
+    .nav {
         display: flex;
         flex-direction: row;
+        justify-content: center;
     }
     .portfolio {
         display: flex;
@@ -111,10 +148,44 @@ main h2 {
         flex-wrap: wrap;
     }
     .banner {
-        flex-direction: row-reverse;
+        flex-direction: row-reverse; 
+        text-align: left;
+        padding-top: 50px;
+    }
+    .banner-text {
+        padding: 0 15px 0 25px;
+    }
+    
+    .banner img {
+        width: 40vw;
+        padding-right: 25px;
     }
     .box  {
         width: 350px;
+    }
+    .box h3 {
+        padding: 15px;
+    }
+    .box p {
+        padding-bottom: 25px;
+    }
+    .footer-home,
+    .footer-portfolio,
+    .footer-contact {
+        display: inherit;
+    }
+    /* I learned that you can reinitialize the initial display when a certain breakpoint is triggered */
+
+    .footer-totop {
+        display: none;
+    }
+    .footer-nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .footer-name {
+        margin-right: auto;
     }
 }
 
@@ -129,12 +200,14 @@ main h2 {
         justify-content: space-between;
     }
     .name {
-       margin-right: auto;
+        padding-left: 25px;
+        margin-right: auto;
     }
     .nav {
         display: flex;
     }
     .banner {
+        margin-top: -10px;
         flex-direction: row-reverse;
     }
     .portfolio {
@@ -146,9 +219,8 @@ main h2 {
     .box  {
         width: 300px;
     }
-
-    .profile-picture, 
-    .banner-text {
-    padding: 40px;
+    .footer-nav {
+        margin-bottom: -20px;
+    }
 }
 }
