@@ -73,7 +73,8 @@ main h2 {
 }
 
 .banner-text {
-    padding: 20px 5px 0 5px;
+    padding: 20px;
+    font-size: large;
 }
 
 .portfolio img {
@@ -112,7 +113,7 @@ main h2 {
 }
 .skills img {
     object-fit: cover;
-    height: 5vh;
+    height: 15vh;
     padding: 20px;
 }
 
@@ -136,6 +137,8 @@ main h2 {
 }
 
 .footer p {
+    width: 80%;
+    margin: 0 auto;
     padding: 1em 0 2em 0;
 }
 
@@ -160,8 +163,6 @@ main h2 {
     .footer-contact {
         display: none;
     }
-    /* I used a media query to hide some content because according to the 320pixel mockup it only shows BACK TO TOP */
-
 
 /* MEDIA QUERIES */
 @media (min-width: 768px){
