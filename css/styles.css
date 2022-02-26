@@ -4,13 +4,20 @@
 }
 
 body {
+    margin: 0 auto;
+    max-width: 1024px;
     background-color: whitesmoke;
+    font-family: 'Open Sans'; 
     color: #4a4a4a;
-    font-family: 'Comfortaa';
-    font-family: 'Open Sans', sans-serif;
     font-size: 16px;
-    line-height: 1.5;
 }
+
+a {
+    text-decoration: none;
+    color: #4a4a4a;
+    letter-spacing: 1.5px;
+  }
+  /* Additional styling for links - this is according to the "exceed expectations" table in the "how you'll be graded" tab  */
 
 nav {
     padding-top: 10px;
@@ -73,7 +80,8 @@ main h2 {
     width: 100%;
 }
 
-.portfolio h2 {
+.portfolio h2,
+.skills h2 {
     padding: 2em;
     text-align: center;
 }
@@ -94,6 +102,16 @@ main h2 {
 .box h3,
 .box p {
     padding-top: 1em;
+}
+/* Additional requirements for "exceed expectations" grade I added a skills section with a simple img */
+.skills {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.skills img {
+    width: 90%;
 }
 
 /***********************************
@@ -130,17 +148,15 @@ main h2 {
     padding: 10px;
 }
 
-/* MEDIA QUERIES */
-
-@media (min-width: 320px){ 
-    .footer-home,
+.footer-home,
     .footer-portfolio,
     .footer-contact {
         display: none;
     }
-}
-/* I used a media query to hide some text because according to the 320pixel mockup it only shows BACK TO TOP */
+    /* I used a media query to hide some content because according to the 320pixel mockup it only shows BACK TO TOP */
 
+
+/* MEDIA QUERIES */
 @media (min-width: 768px){
     .nav {
         display: flex;
@@ -153,6 +169,7 @@ main h2 {
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
+        padding: 0 10px 0 10px;
     }
     .banner {
         flex-direction: row-reverse; 
@@ -160,16 +177,19 @@ main h2 {
         padding-top: 50px;
     }
     .banner-text {
-        padding: 0 15px 0 25px;
+        font-size: 1.3em;
+        justify-content: flex-start;
+        padding: 0 15px 0 20px;
     }
     
     .banner img {
-        width: 40vw;
+        width: 35vw;
         padding-right: 25px;
     }
     .box  {
-        width: 350px;
+        flex-basis: calc(50% - 20px);
     }
+    /* This flex basis property is so cool its blowing my mind! */
     .box h3 {
         padding: 15px;
     }
@@ -179,7 +199,7 @@ main h2 {
     .footer-home,
     .footer-portfolio,
     .footer-contact {
-        display: inherit;
+        display: inline-block;
     }
     /* I learned that you can reinitialize the initial display when a certain breakpoint is triggered */
     .footer p {
@@ -199,8 +219,15 @@ main h2 {
     .footer-name {
         margin-right: auto;
     }
-    .profile-picture {
-
+    .skills {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .skills img {
+        width: calc(50% - 20px);
     }
 }
 
@@ -216,7 +243,7 @@ main h2 {
         padding-right: 30px;
     }
     .name {
-        padding-left: 25px;
+        padding-left: 40px;
         margin-right: auto;
     }
     .nav {
@@ -229,14 +256,29 @@ main h2 {
         margin-top: -10px;
         flex-direction: row-reverse;
     }
+    .banner-text {
+        padding: 0 40px 0 40px;
+    }
     .portfolio {
-        flex-wrap: wrap;
         display: flex;
+        flex-wrap: wrap;
         align-items: center;
         justify-content: center;
+        padding: 0 30px 0 30px;
     }
     .box  {
-        width: 300px;
+        flex-basis: calc(33.333% - 20px);
+    }
+    /* same thing here, instead of adding padding and margin use flex */
+    .skills {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .skills img {
+        width: calc(40% - 20px);
     }
     .footer p {
         width: 45%;
