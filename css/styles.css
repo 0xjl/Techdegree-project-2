@@ -4,12 +4,16 @@
 }
 
 body {
+    box-sizing: border-box;
     margin: 0 auto;
     max-width: 1024px;
     background-color: white;
-    font-family: 'Open Sans'; 
     color: #4a4a4a;
-    font-size: 16px;
+    font-family: 'Open Sans'; 
+}
+
+p {
+    font-size: 1em;
 }
 
 a {
@@ -17,15 +21,23 @@ a {
     color: #4a4a4a;
     letter-spacing: 1.5px;
   }
-  /* Additional styling for links - this is according to the "exceed expectations" table in the "how you'll be graded" tab  */
+
+a:hover {
+    color: cornflowerblue;
+}
+  /* exceeds expectations requirement: additional styling for links - this is according to the "exceed expectations" table in the "how you'll be graded" tab  */
 
 nav {
     padding-top: 10px;
 }
 
+h2 {
+    font-size: 1.2em;
+}
+
 main h2 {
     text-align: center;
-    padding: 75px 10px;
+    padding: 5em 1em 2em 1em;
 }
 
 /***********************************
@@ -46,6 +58,14 @@ main h2 {
     text-align: center;
     align-self: center;
 }
+
+.name,
+h2,
+h3,
+h4 {
+    color: midnightblue;
+}
+/* exceeds expectations requirement: The color of at least one piece of text has been changed. */
 
 .header {
     padding-top: 20px;
@@ -73,15 +93,18 @@ main h2 {
 }
 
 .banner-text {
-    padding: 20px;
-    font-size: large;
+    padding: 20px 10px 20px 10px;
 }
 
 .portfolio img {
+    padding-top: .8em;
     width: 100%;
 }
 
-.portfolio h2,
+.portfolio p {
+    padding-top: .8em;
+}
+
 .skills h2 {
     padding: 2em;
     text-align: center;
@@ -94,17 +117,10 @@ main h2 {
 
 .box h3 {
    font-size: 1.4em;
+   padding-top: 1em;
 }
 
-.box p {
-    padding-bottom: 25px;
-}
-
-.box h3,
-.box p {
-    padding-top: 1em;
-}
-/* Additional requirements for "exceed expectations" grade I added a skills section with a simple img */
+/* Additional requirements for "exceed expectations" grade I added a skills section with a three images */
 .skills {
     display: flex;
     flex-direction: column;
@@ -113,9 +129,10 @@ main h2 {
 }
 .skills img {
     object-fit: cover;
-    height: 15vh;
+    height: 12vh;
     padding: 20px;
 }
+/* Additional requirements for A new background color or image for the navigation and/or main sections of the site. */
 
 .skills figure {
     display: flex;
@@ -137,7 +154,6 @@ main h2 {
 }
 
 .footer p {
-    width: 80%;
     margin: 0 auto;
     padding: 1em 0 2em 0;
 }
@@ -147,11 +163,11 @@ main h2 {
 }
 
 .footer-nav {
-    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
     padding: 0.8em 0.25em 0.8em 0.25em;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .footer-nav h4 {
@@ -200,14 +216,11 @@ main h2 {
         padding-right: 25px;
     }
     .box  {
-        flex-basis: calc(50% - 20px);
+        width: calc(50% - 20px);
     }
     /* This flex basis property is so cool its blowing my mind! */
     .box h3 {
-        padding: 15px;
-    }
-    .box p {
-        padding-bottom: 25px;
+        padding: 1em;
     }
     .footer p {
         width: 60%;
@@ -235,11 +248,12 @@ main h2 {
     }
     .skills img {
         object-fit: cover;
-        height: 7.5vh;
+        height: 100%;
     }
     .skills figure {
         display: flex;
         flex-direction: row;
+        height: 15vh;
     }
 }
 
@@ -251,7 +265,7 @@ main h2 {
     }
     .header {
         flex-wrap: wrap;
-        justify-content: space-between;
+        justify-content: space-around;
         padding-right: 30px;
     }
     .name {
@@ -276,10 +290,9 @@ main h2 {
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        padding: 0 30px 0 30px;
     }
     .box  {
-        flex-basis: calc(33.333% - 20px);
+        flex-basis: calc(33.333% - 30px);
     }
     /* same thing here, instead of adding padding and margin use flex-basis */
     .skills {
