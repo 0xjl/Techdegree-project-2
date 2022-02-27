@@ -288,7 +288,6 @@ h4 {
         margin-right: 20px;
     }
     .banner {
-        margin-top: -10px;
         flex-direction: row-reverse;
     }
     .banner-text {
@@ -303,7 +302,6 @@ h4 {
     .box  {
         flex-basis: calc(33.333% - 30px);
     }
-
     .box p {
         padding: .25em;
     }
@@ -321,9 +319,6 @@ h4 {
     .footer p {
         width: 45%;
         align-self: center;
-    }
-    .footer-nav {
-        margin-bottom: -20px;
     }
     .skills img {
         object-fit: cover;
