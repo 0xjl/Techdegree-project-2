@@ -9,11 +9,12 @@ body {
     max-width: 1024px;
     background-color: white;
     color: #4a4a4a;
-    font-family: 'Open Sans'; 
+    font-family: 'Open Sans', sans-serif;
 }
 
 p {
     font-size: 1em;
+    padding: 5px;
 }
 
 a {
@@ -113,6 +114,7 @@ h4 {
 .box  {
     margin: 10px;
     width: 300px;
+    min-height: 400px;
 }
 
 .box h3 {
@@ -176,7 +178,8 @@ h4 {
 
 .footer-home,
     .footer-portfolio,
-    .footer-contact {
+    .footer-contact,
+    .footer-skills {
         display: none;
     }
 
@@ -184,7 +187,8 @@ h4 {
 @media (min-width: 768px){
     .footer-home,
     .footer-portfolio,
-    .footer-contact {
+    .footer-contact,
+    .footer-skills {
         display: inline-block;
     }
 /* I learned that you can reinitialize the initial display when a certain breakpoint is triggered */
@@ -222,6 +226,11 @@ h4 {
     .box h3 {
         padding: 1em;
     }
+
+    .box p {
+        padding: 0 1.8em;
+    }
+
     .footer p {
         width: 60%;
         align-self: center;
@@ -293,6 +302,10 @@ h4 {
     }
     .box  {
         flex-basis: calc(33.333% - 30px);
+    }
+
+    .box p {
+        padding: .25em;
     }
     /* same thing here, instead of adding padding and margin use flex-basis */
     .skills {
